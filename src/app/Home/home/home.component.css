@@ -70,3 +70,6 @@ display: block;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+.democlass{
+    color: red;
+}
