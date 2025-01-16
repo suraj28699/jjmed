@@ -1,0 +1,76 @@
+<p>add-remove-general-products works!</p>
+<div class="container-fluid">
+  <div style="border: 1px solid red;margin: 10px;display: flex;justify-content: space-between;" class="row">
+    <div class="col-4" style="border: 1px solid blue;">
+      <!-- general product info collection form -->
+      <form [formGroup]="generalProductEntry" (ngSubmit)="generalProductEntry.status=='VALID' && onSubmit()" style="color: black;">
+        <div class="form-group">
+          <label for="fileChoose">Upload product image:</label>
+          <input type="file" name="productImg" id="" class=" form-control" formControlName="productImg">
+        </div>
+        <div class="form-group">
+          <label for="productBy">Product by(company name):</label>
+          <select class="form-select form-control-sm form-control" aria-label="Default select example"
+            formControlName="productBy">
+            <option let *ngFor="let i of productByList">{{i}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="productName">Product Name:</label>
+          <input type="text" name="productName" class="form-control form-control-sm" formControlName="productName" [ngClass]="{error:f.productName.errors && isSubmitted}">
+          <div *ngIf="f.productName.errors && isSubmitted" class="e">Product name is required and length should between 3 to 9 only</div>
+        </div>
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input type="number" name="price" formControlName="price">
+        </div>
+        <div class="form-group">
+          <label for="mrp">MRP:</label>
+          <input type="number" name="mrp" formControlName="mrp">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" (click)="forValidation()">Submit</button>
+          <button type="button" class="btn btn-info" (click)="update(generalProductEntry)">Update</button>
+        </div>
+      </form>
+      <!-- form end  -->
+    </div>
+    <div class="col-7" style="border: 1px solid gray;">
+      <table class="table table-light table-hover">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Image</th>
+            <th scope="col">Product By</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">MRP By</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of allProductDataArray10">
+            <th scope="row">{{i.id}}</th>
+            <td>{{i.productImg}}</td>
+            <td>{{i.productBy}}</td>
+            <td>{{i.productName}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.mrp}}</td>
+            <td style="display: flex;justify-content: space-between;" ><Button (click)="edit(i)" class="btn btn-info">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+              <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
+            </svg> Edit</Button> <Button (click)="delete(i)" class="btn btn-danger">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+              <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+            </svg>
+             Delete</Button></td>
+          </tr>
+         <tr>
+          <td><button (click)="paginationPrevious()" class="btn btn-primary">Previous</button></td><td></td><td></td><td></td><td></td><td></td><td style="text-align: right;"><button (click)="paginationNext()" class="btn btn-primary" >next</button></td>
+         </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

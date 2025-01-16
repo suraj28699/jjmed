@@ -1,0 +1,25 @@
+<p>add-to-cart works!</p>
+<div style="display: flex; flex-direction: row;overflow-x:scroll; ">
+    <div class="card" style="min-width: 18rem !important;margin: 10px;" *ngFor="let i of topOffersList">
+        <img style="border: 1px solid red;text-align:center;" width="10px" height="150px" src="..."
+            class="card-img-top" alt="product image">
+        <div class="card-body">
+            <div>{{i.productBy}}</div>
+            <h6>{{i.productName}}</h6>
+            <span>
+                <h6 style="display: inline-block;">MRP {{ i.mrp | currency:'INR' }} </h6>
+            </span>&nbsp; &nbsp;<span> <del>{{i.price | currency:'INR'}}</del> </span>
+            <div>(Save {{i.disSaved}})</div>
+
+            <div style="text-align:center;">
+<p>
+
+    <a (click)="proceedToBuy()" class="btn btn-info" style="width: 100%;">Proceed to buy</a>
+</p>
+             
+                <a (click)="removeFromCart(i.id)" class="btn btn-danger" style="width: 100%;">Remove from cart</a>
+          
+            </div>
+        </div>
+    </div>
+</div>

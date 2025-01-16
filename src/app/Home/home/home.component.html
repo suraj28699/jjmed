@@ -1,0 +1,154 @@
+<div class="MedplusMart">
+    <div class="container-fluid my-3">
+        <div class="row">
+            <div class="col">
+
+                <div class="catalog-new-homepage">
+                    <div class="shadow-lg">
+                        <div class="new-product-search-container"
+                            style="display: flex;align-items: center;justify-content: center;">
+                            <div class="homepage-search" style="width: 50% !important;height: auto;">
+                                <p class="text-white display-4 mb-2">
+                                    Search Medicines / General Products
+                                </p>
+                                <div class="homepage-input">
+                                    <input style="width: 100%;border-radius: 50px; border: 5px solid gray;height: 70px;"
+                                        type="text" name="searchFor" placeholder="search for...{{searchMenu_i}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <!-- new div  -->
+                <div style="border: 10px solid red;height: 250px; width: 100%;">
+                    <!-- <img src="../../../assets/Home/carousel entry1.jpg" width="100%" height="100px" alt=""> -->
+                    <!-- carousel to show discount and offer at entry  -->
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="..." class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!-- carousel end  -->
+                </div>
+                <div class="row" style="border: 10px solid green; display: flex;justify-content: space-between; ">
+                    <div class="col-7" style="border: 5px solid red;margin: 5px;">
+                        <p>Shop by category</p>
+                        <div style="border: 5px solid green;width: 100%;display: flex; justify-content: space-around;">
+                            <a href=""><img class="shopByCategoryIMG" style="sbackground-color:orange;" src="../../../assets/Home/baby need.png" alt=""><div>baby needs</div></a>
+                            <a href=""><img style="width: 150px; height: 150px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-right-radius: 15px;; background-color: orange;" src="../../../assets/Home/baby need.png" alt=""><div>baby nneds</div></a>
+                            <a href=""><img style="width: 150px; height: 150px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-right-radius: 15px;; background-color: orange;" src="../../../assets/Home/baby need.png" alt=""><div>baby nneds</div></a>
+                            <a href=""><img style="width: 150px; height: 150px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-right-radius: 15px;; background-color: orange;" src="../../../assets/Home/baby need.png" alt=""><div>baby nneds</div></a>
+                            <a href=""><img style="width: 150px; height: 150px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-right-radius: 15px;; background-color: orange;" src="../../../assets/Home/baby need.png" alt=""><div>baby nneds</div></a>
+                            <a href=""><img style="width: 150px; height: 150px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-right-radius: 15px;; background-color: orange;" src="../../../assets/Home/baby need.png" alt=""><div>baby nneds</div></a>
+                            <a href=""><img style="width: 150px; height: 150px;border-top-right-radius: 15px;border-top-left-radius: 15px;border-bottom-right-radius: 15px;; background-color: orange;" src="../../../assets/Home/baby need.png" alt=""><div>baby nneds</div></a>
+                        </div>
+                    </div>
+                    <div class="col-4 " style="border: 5px solid red; ">
+                        Quick order and help
+                        <button class="buttonb"
+                            style="text-align: left; background-color: white;width: 100%;border-radius: 10px;margin: 10px 0 10px 0;"
+                            (click)="prescriptionUpload()">
+                            <b>Upload for order</b>
+                            <small style="display: block;">get call back</small>
+                        </button>
+
+                        <button (click)="needHelp()" class="buttonb"
+                            style="text-align: left; background-color: white;width: 100%;border-radius: 10px;margin: 10px 0 10px 0;">
+                            <b>Need help with ordering</b>
+                            <small style="display: block;">call 111111111</small>
+                        </button>
+                        <div style="position: fixed;left: 41%;top: 41%;">
+                            <!-- <div style="width: 300px;height: 300px;">hihgfhgfhg</div> -->
+                            <div class="card " [ngClass]="hideShow" style="width: 25rem;">
+                                <img height="150" style="margin: 5px;"
+                                    src="../../../assets/Home/need help with ordering.svg" class="card-img-top"
+                                    alt="...">
+                                <div class="card-body" style="text-align:center;">
+                                    <p class="card-text">For customer care help with your order, please call</p>
+                                    <h5 class="title">+91 111111111</h5>
+                                    <p class="card-text">Available from 6 AM - 10 PM everyday</p>
+                                    <a (click)="hideShowNeedHelpCard()" href="#" class="btn btn-outline"
+                                        style="color: orange;">Close</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Top offers cards -->
+                <div  >
+                    <h5 style="padding: 10px;">Top Offers</h5>
+                    <div style="display: flex; flex-direction: row;overflow-x:scroll; ">
+                        <div class="card" style="min-width: 18rem !important;margin: 10px;" *ngFor="let i of topOffersList">
+                            <img style="border: 1px solid red;text-align:center;" width="10px" height="150px" src="..."
+                                class="card-img-top" alt="product image">
+                            <div class="card-body">
+                                <div>{{i.productBy}}</div>
+                                <h6>{{i.productName}}</h6>
+                                <span>
+                                    <h6 style="display: inline-block;">MRP {{ i.mrp | currency:'INR' }} </h6>
+                                </span>&nbsp; &nbsp;<span> <del>{{i.price | currency:'INR'}}</del> </span>
+                                <div>(Save {{i.disSaved}})</div>
+
+                                <div style="text-align:center;">
+                                    <a (click)="addToCart(i)" class="btn btn-danger" style="width: 100%;">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <br><br><hr>A typeahead example that gets values from a static <code>string[]</code>
+<ul>
+	<li><code>debounceTime</code> operator</li>
+	<li>kicks in only if 2+ characters typed</li>
+	<li>limits to 10 results</li>
+</ul>chdhd
+
+<label for="typeahead-basic">Search for a state:</label>
+<input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search"/>
+<hr />
+<pre>Model: {{ model | json }}</pre> -->

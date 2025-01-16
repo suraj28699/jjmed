@@ -1,0 +1,72 @@
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem 0 1rem 0 !important;
+}
+.catalog-new-homepage {
+    margin: -1rem -.9375rem 1.5rem;
+}
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(8, 8, 8, .175) !important;
+}
+.mx-0{
+margin: 0 0 0 0 !important;
+}
+.catalog-new-homepage .new-product-search-container {
+    background: linear-gradient(90deg, #000, rgba(0, 0, 0, .7));
+    height: 250px;
+    position: relative;
+    /* width: 100vw; */
+    
+}
+.catalog-new-homepage .new-product-search-container:after {
+    background: url("../../../assets/Home/homeStartBackground.jpg");
+    background-size: cover;
+    content: "" !important;
+    filter: grayscale(100%) brightness(70%) invert(40%);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+   
+}
+.catalog-new-homepage .new-product-search-container .homepage-search {
+    width: 50%;
+    z-index: 1;
+}
+.display-4 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.mb-2, .my-2 {
+    margin-bottom: .5rem !important;
+}
+.homepage-input{
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: back;
+   
+}
+.buttonb:hover b{
+    color: red;
+}
+.hideGoSomewhereCard{
+    display: none;
+}
+.showGoSomewhereCard{
+display: block;
+}
+.shopByCategoryIMG{
+    width: 150px; 
+    height: 150px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}

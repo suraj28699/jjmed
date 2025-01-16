@@ -1,0 +1,29 @@
+{
+  "generalProductEntryInfo": [
+    {
+      "id": "43a6",
+      "productImg": "C:\\fakepath\\testimg - Copy.jpg",
+      "productBy": "Sun Pharma",
+      "productName": "sss",
+      "price": 1111,
+      "mrp": 1111
+    },
+    {
+      "productImg": "",
+      "productBy": "Meta Ltd",
+      "productName": "Acikino",
+      "price": 423,
+      "mrp": 525,
+      "id": "3b70"
+    },
+    {
+      "id": "7ead",
+      "productImg": "",
+      "productBy": "Sun Pharma",
+      "productName": "fesfs",
+      "price": 55,
+      "mrp": 60
+    }
+  ],
+  "addToCart": []
+}
